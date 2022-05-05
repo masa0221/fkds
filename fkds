@@ -1,0 +1,34 @@
+#!/bin/bash
+
+text=${1}
+
+if [ "${text}" == "" ]; then
+  cat <<EOS
+This is a things for generating speech bubble.
+The "fkds" command comes from "FuKiDaShi" in Japanese.
+
+Usage:
+  ${0} sentence
+EOS
+
+  exit 0
+fi
+
+body="＞   ${text}   ＜"
+
+text_length=$(echo ${text} | wc -m)
+text_byte=$(echo ${text} | wc -c)
+
+if [ ${text_byte} -eq ${text_length} ]; then
+  repeat_num=$(echo "${text_length} / 2 + 1" | bc)
+else
+  repeat_num=${text_length}
+fi
+
+header="＿$(yes '人' | head -n ${repeat_num} | tr -d '\n')＿"
+footer="￣$(yes 'Y^' | head -n ${repeat_num} | tr -d '\n')￣"
+
+echo ${header}
+echo ${body}
+echo ${footer}
+
