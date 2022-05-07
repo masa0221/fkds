@@ -28,9 +28,10 @@ $ fkds "What! I can't believe it\!"
 ```
 
 ```
-$ fkds "な、なんだってー！"
+$ ./fkds "な、なんだってー！"
 ＿⅄_⅄_⅄_⅄_⅄_⅄_⅄_⅄_⅄_⅄_＿
 ＞　な、なんだってー！　＜
 ￣Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^￣
 ```
-
+The written example can't display spaces, but I don't know why.  
+<img width="243" alt="image" src="https://user-images.githubusercontent.com/1150769/167233594-4dd75271-007b-4d6e-afc5-135e1f292765.png">
