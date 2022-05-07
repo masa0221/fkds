@@ -22,15 +22,15 @@ curl https://raw.githubusercontent.com/masa0221/fkds/HEAD/fkds -o /usr/local/bin
 
 ```
 $ fkds "What! I can't believe it\!"
-＿人人人人人人人人人人人人人人＿
-＞ What! I can't believe it! ＜
+＿⅄_⅄_⅄_⅄_⅄_⅄_⅄_⅄_⅄_⅄_⅄_⅄_⅄_⅄_＿
+＞　What! I can't believe it!　＜
 ￣Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^￣
 ```
 
 ```
 $ fkds "な、なんだってー！"
-＿人人人人人人人人人人＿
-＞ な、なんだってー！ ＜
-￣Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^
+＿⅄_⅄_⅄_⅄_⅄_⅄_⅄_⅄_⅄_⅄_＿
+＞　な、なんだってー！　＜
+￣Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^￣
 ```
 
