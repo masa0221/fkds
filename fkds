@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 text=${1}
 
@@ -16,19 +16,19 @@ fi
 
 body="＞　${text}　＜"
 
-text_length=$(echo ${text} | wc -m)
-text_byte=$(echo ${text} | wc -c)
+text_length=$(echo $text | wc -m)
+text_byte=$(echo $text | wc -c)
 
-if [ ${text_byte} -eq ${text_length} ]; then
-  repeat_num=$(echo "${text_length} / 2 + 1" | bc)
+if [ $text_byte -eq $text_length ]; then
+  repeat_num=$(expr ${text_length} / 2 + 1)
 else
-  repeat_num=${text_length}
+  repeat_num=$text_length
 fi
 
-header="＿$(yes '⅄_' | head -n ${repeat_num} | tr -d '\n')＿"
-footer="￣$(yes 'Y^' | head -n ${repeat_num} | tr -d '\n')￣"
+header="＿$(yes '⅄_' | head -n $repeat_num | tr -d '\n')＿"
+footer="￣$(yes 'Y^' | head -n $repeat_num | tr -d '\n')￣"
 
-echo ${header}
-echo ${body}
-echo ${footer}
+echo $header
+echo $body
+echo $footer
 
