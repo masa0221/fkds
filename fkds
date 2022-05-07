@@ -14,7 +14,7 @@ EOS
   exit 0
 fi
 
-body="＞   ${text}   ＜"
+body="＞　${text}　＜"
 
 text_length=$(echo ${text} | wc -m)
 text_byte=$(echo ${text} | wc -c)
@@ -25,7 +25,7 @@ else
   repeat_num=${text_length}
 fi
 
-header="＿$(yes '人' | head -n ${repeat_num} | tr -d '\n')＿"
+header="＿$(yes '⅄_' | head -n ${repeat_num} | tr -d '\n')＿"
 footer="￣$(yes 'Y^' | head -n ${repeat_num} | tr -d '\n')￣"
 
 echo ${header}
