@@ -1,5 +1,5 @@
 # fkds
-This is a things for generating speech bubble.
+This is a things for generating speech bubble.  
 The "fkds" command comes from "FuKiDaShi" in Japanese.
 
 
