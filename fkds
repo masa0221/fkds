@@ -6,9 +6,8 @@ if [ "${text}" == "" ]; then
   cat <<EOS
 This is a things for generating speech bubble.
 The "fkds" command comes from "FuKiDaShi" in Japanese.
-
 Usage:
-  ${0} sentence
+  ${0} STRING
 EOS
 
   exit 0
@@ -16,19 +15,18 @@ fi
 
 body="＞　${text}　＜"
 
-text_length=$(echo $text | wc -m)
-text_byte=$(echo $text | wc -c)
+text_length=$(echo ${text} | wc -m)
+text_byte=$(echo ${text} | wc -c)
 
-if [ $text_byte -eq $text_length ]; then
+if [ ${text_byte} -eq ${text_length} ]; then
   repeat_num=$(expr ${text_length} / 2 + 1)
 else
-  repeat_num=$text_length
+  repeat_num=${text_length}
 fi
 
-header="＿$(yes '⅄_' | head -n $repeat_num | tr -d '\n')＿"
-footer="￣$(yes 'Y^' | head -n $repeat_num | tr -d '\n')￣"
+header="＿$(yes '⅄_' | head -n ${repeat_num} | tr -d '\n')＿"
+footer="￣$(yes 'Y^' | head -n ${repeat_num} | tr -d '\n')￣"
 
-echo $header
-echo $body
-echo $footer
-
+echo ${header}
+echo ${body}
+echo ${footer}
