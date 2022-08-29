@@ -1,18 +1,54 @@
 #!/usr/bin/env bash
 
+cmdname=$(basename ${0})
+
+################
+# functions
+################
+function usage() {
+    cat <<EOS
+This is a things for generating speech bubble.
+The "fkds" command comes from "FuKiDaShi" in Japanese.
+
+Usage:
+    ${cmdname} [OPTIONS] STRING
+
+OPTIONS:
+    -h                 Show this help text
+
+EOS
+}
+
+################
+# options
+################
+while getopts h OPT
+do
+  case ${OPT} in
+    h)
+      usage
+      exit 0
+      ;;
+  esac
+done
+
+shift $(expr $OPTIND - 1)
+
+
+################
+# arguments
+################
 text=${1}
 
 if [ "${text}" == "" ]; then
-  cat <<EOS
-This is a things for generating speech bubble.
-The "fkds" command comes from "FuKiDaShi" in Japanese.
-Usage:
-  ${0} STRING
-EOS
-
-  exit 0
+  echo "${cmdname}: STRING argument is required" >&2
+  exit 1
 fi
 
+
+################
+# main
+################
 body="＞　${text}　＜"
 
 text_length=$(echo ${text} | wc -m)
